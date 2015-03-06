@@ -6,38 +6,73 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico">
 	<style>
 		body {
-			position: relative;
-			height: 100vh;
 			margin: 0;
-			background: url('background.jpg') center center / cover;
-			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 		}
 
-		header {
+		.jumbo {
 			font-family: 'Pacifico', sans-serif;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
 			font-size: 120px;
 			color: #f8f8f8;
 			text-shadow: rgba(51, 51, 51, .75) 4px 4px 6px;
+			line-height: 100vh;
+			text-align: center;
+			background: #F0C96C;
 		}
 
-		.attribution {
+		.jumbo__background-image {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			transition: opacity 1s ease-out;
+		}
+
+		.jumbo--is-loaded .jumbo__background-image {
+			opacity: 1;
+		}
+
+		.jumbo__contents {
+			position: relative;
+			z-index: 1;
+		}
+
+		.jumbo__attribution {
 			position: absolute;
 			right: 0;
 			bottom: 0;
 			padding: 8px;
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 			font-size: 12px;
+			line-height: 1;
 			color: rgba(255, 255, 255, .9);
 		}
 
 	</style>
 </head>
 <body>
-	<header>Frondent</header>
-	<a class="attribution" href="https://www.flickr.com/photos/luke-photography/15581819915">Fall, Leafs &amp; Colors by Luke Lawreszuk</a>
+	<header class="jumbo">
+		<div class="jumbo__background-image"></div>
+		<div class="jumbo__contents">
+			Frondent
+			<a class="jumbo__attribution" href="https://www.flickr.com/photos/luke-photography/15581819915">Fall, Leafs &amp; Colors by Luke Lawreszuk</a>
+		</div>
+	</header>
+	<script>
+		loadBackgroundImage();
+
+		function loadBackgroundImage() {
+			var img = document.createElement('img');
+			img.src = 'background.jpg'
+			img.addEventListener('load', function() {
+				var jumbo = document.getElementsByClassName('jumbo')[0];
+				var jumboBackgroundImage = document.getElementsByClassName('jumbo__background-image')[0];
+
+				jumbo.classList.add('jumbo--is-loaded');
+				jumboBackgroundImage.style.background = "url('background.jpg') center center / cover";
+			})
+		}
+	</script>
 </body>
 </html>
