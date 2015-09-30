@@ -13,6 +13,38 @@ handlers:
   static_files: static/index.html
   upload: static/index\.html
 
+- url: /treejack
+  static_files: static/treejack.html
+  upload: static/treejack\.html
+
+- url: /treejack/
+  static_files: static/treejack.html
+  upload: static/treejack\.html
+
+- url: /treejack-be
+  static_files: static/treejack-be.html
+  upload: static/treejack-be\.html
+
+- url: /treejack-be/
+  static_files: static/treejack-be.html
+  upload: static/treejack-be\.html
+
+- url: /treejack-ge
+  static_files: static/treejack-ge.html
+  upload: static/treejack-ge\.html
+
+- url: /treejack-ge/
+  static_files: static/treejack-ge.html
+  upload: static/treejack-ge\.html
+
+- url: /treejack-uk
+  static_files: static/treejack-uk.html
+  upload: static/treejack-uk\.html
+
+- url: /treejack-uk/
+  static_files: static/treejack-uk.html
+  upload: static/treejack-uk\.html
+
 - url: /
   static_dir: static
 
