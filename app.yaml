@@ -45,6 +45,13 @@ handlers:
   static_files: static/treejack-uk.html
   upload: static/treejack-uk\.html
 
+- url: /treejack-cu-acc
+  static_files: static/treejack-cu-acc.html
+  upload: static/treejack-cu-acc\.html
+
+- url: /treejack-cu-acc/
+  static_files: static/treejack-cu-acc.html
+  upload: static/treejack-cu-acc\.html
 - url: /
   static_dir: static
 
