@@ -52,6 +52,16 @@ handlers:
 - url: /treejack-cu-acc/
   static_files: static/treejack-cu-acc.html
   upload: static/treejack-cu-acc\.html
+
+- url: /treejack-cpu-us
+  static_files: static/treejack-cpu-us.html
+  upload: static/treejack-cpu-us\.html
+
+- url: /treejack-cpu-us/
+  static_files: static/treejack-cpu-us.html
+  upload: static/treejack-cpu-us\.html
+
+
 - url: /
   static_dir: static
 
